@@ -4,4 +4,5 @@
 ### Django Rest Framework
 ### MongoDB Cloud
 ### Poetry
-### Redis
+### Docker
+### Docker Compose

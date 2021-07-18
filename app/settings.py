@@ -68,10 +68,10 @@ WSGI_APPLICATION = 'app.wsgi.application'
 DATABASES = {
         'default': {
             'ENGINE': 'djongo',
-            'NAME': 'your-db-name',
+            'NAME': 'lobbys',
             'ENFORCE_SCHEMA': False,
             'CLIENT': {
-                'host': 'mongodb+srv://<username>:<password>@<atlas cluster>/<myFirstDatabase>?retryWrites=true&w=majority'
+                'host': 'mongodb+srv://hector:u4xaknoNeFdLhM8Z@lobbys.ztmv0.mongodb.net/lobbys?retryWrites=true&w=majority'
             }  
         }
 }

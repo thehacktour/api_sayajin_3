@@ -6,5 +6,6 @@ urlpatterns = [
 
     path('all/', views.AllUsers.as_view()),
     path('add/', views.AddUser.as_view()),
+    path('<int:id>/', views.SpecificUser.as_view()),
 
 ]

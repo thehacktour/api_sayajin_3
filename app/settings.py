@@ -68,13 +68,14 @@ WSGI_APPLICATION = 'app.wsgi.application'
 DATABASES = {
         'default': {
             'ENGINE': 'djongo',
-            'NAME': 'sayajin',
+            'NAME': 'your-db-name',
             'ENFORCE_SCHEMA': False,
             'CLIENT': {
-                'host': 'localhost:27017'
+                'host': 'mongodb+srv://<username>:<password>@<atlas cluster>/<myFirstDatabase>?retryWrites=true&w=majority'
             }  
         }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

@@ -1,3 +1,4 @@
+from app import user
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
@@ -50,3 +51,16 @@ class SpecificUser(APIView):
             return Response(user_serializer.data)
         else:
             return Response('Did not work')
+    
+    def get(self, request, id):
+
+        user = self.get_user(id)
+        user_serializer = UserSerializer(user)
+        return Response(user_serializer.data)
+
+    def delete(self, request, id):
+
+        user = self.get_user(id)
+        user_serializer = UserSerializer(user)
+        user.delete()
+        return Response(user_serializer.data)

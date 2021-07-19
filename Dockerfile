@@ -1,8 +1,7 @@
-FROM python:3
-ENV PYTHONUNBUFFERED=1
-
-WORKDIR /app
-
-COPY poetry.lock pyproject.toml
+FROM python:2.7
+ENV PYTHONUNBUFFERED 1
+RUN mkdir /code
+WORKDIR /code
+ADD poetry.lock pyproject.toml
 RUN poetry install
-COPY . /app/
+ADD . /code/

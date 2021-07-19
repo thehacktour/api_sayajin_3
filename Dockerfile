@@ -1,12 +1,8 @@
-FROM python:3.9
+FROM python:3
+ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
-
-
-
-COPY pyproject.toml poetry.lock /app/
-
+COPY poetry.lock pyproject.toml
 RUN poetry install
-
-COPY . .
+COPY . /app/

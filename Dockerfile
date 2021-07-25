@@ -1,7 +1,11 @@
-FROM python:2.7
-ENV PYTHONUNBUFFERED 1
-RUN mkdir /code
-WORKDIR /code
-ADD poetry.lock pyproject.toml
-RUN poetry install
-ADD . /code/
+FROM python:3.8-slim-buster
+
+WORKDIR /app
+
+RUN pip install poetry
+
+COPY pyproject.toml poetry.lock ./
+
+RUN poetry config virtualenvs.create false && poetry install
+
+CMD [ "python3","manage.py","runserver" ]

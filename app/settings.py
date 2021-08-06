@@ -61,7 +61,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'app.wsgi.application'
 
-
+DEBUG = True
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
